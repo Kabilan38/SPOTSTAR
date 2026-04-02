@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Directors Ilaiyaraaja</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Music Directors</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Ilaiyaraaja.jpg" alt="" id="photo">
+            <h1>About Ilaiyaraaja</h1>
+            <p>Ilaiyaraaja (born R. Gnanathesigan, 1943) is a legendary Indian film composer, singer, and songwriter,
+                widely regarded as a musical genius (Isaignani) who revolutionized South Indian cinema. Debuting in 1976
+                with Annakili, he has composed over 6,000 songs and provided scores for 1,000+ films in Tamil, Telugu,
+                Malayalam, Kannada, and Hindi.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Ilaiyaraaja Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aasai Athigam Vachu</p>
+                <audio src="/audio/Aasai Athigam Vachu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Chinna Chinna Vanna Kuyil</p>
+                <audio src="/audio/Chinna Chinna Vanna Kuyil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Ilamai Idho Idho</p>
+                <audio src="/audio/Ilamai Idho Idho.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Inji Idupazhaga</p>
+                <audio src="/audio/Inji Idupazhagi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Kaattukuyilu</p>
+                <audio src="/audio/Kaattukuyilu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Kanmani Anbodu Kadhalan</p>
+                <audio src="/audio/Kanmani Anbodu Kadhalan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Karutha Machan</p>
+                <audio src="/audio/Karutha Machan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Maanguyile Poonguyile</p>
+                <audio src="/audio/Maanguyile Poonguyile.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Pothi Vachcha Malligai</p>
+                <audio src="/audio/Pothi Vachcha Malligai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Thendral Vandhu</p>
+                <audio src="/audio/Thendral Vandhu.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

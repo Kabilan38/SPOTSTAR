@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist Yugabharathi</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Lyricist</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Yugabharathi.jpg" alt="" id="photo">
+            <h1>About Yugabharathi</h1>
+            <p>Yugabharathi is a Tamil poet and lyricist. He started his career as editor in Kanaiyazhi and turned into
+                a lyricist in Tamil film industry. Debuting in the film Aanandham with lyrics for the song
+                "Pallankuzhiyin vattam parthaen", he has become a successful lyricist penning more than 1000 songs.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Yugabharathi Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aathi</p>
+                <audio src="/audio/Aathi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Kokkarakko</p>
+                <audio src="/audio/Kokkarakko.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Mailaanji</p>
+                <audio src="/audio/Mailaanji.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Onnappola Oruthana</p>
+                <audio src="/audio/Onnappola Oruthana.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Onnavitta Yaarum Yenakilla</p>
+                <audio src="/audio/Onnavitta Yaarum Yenakilla.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Sollitaley Ava Kaadhala</p>
+                <audio src="/audio/Sollitaley Ava Kaadhala.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Thaen Thaen Thaen</p>
+                <audio src="/audio/Thaen Thaen Thaen.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Un Mela Oru Kannu</p>
+                <audio src="/audio/Un Mela Oru Kannu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Varuthapadatha Vaalibar Sangam</p>
+                <audio src="/audio/Varuthapadatha Vaalibar Sangam.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vennilavu Saaral</p>
+                <audio src="/audio/Vennilavu Saaral.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

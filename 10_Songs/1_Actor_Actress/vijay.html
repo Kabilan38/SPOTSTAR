@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Vijay</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Actor</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/vijay.jpg" alt="" id="photo">
+            <h1>About Vijay</h1>
+            <p>Joseph Vijay Chandrasekhar (born 22 June 1974), known as Vijay or "Thalapathy," is a premier Indian
+                actor, playback singer, and politician in Tamil cinema. With a 30-year career and ~69 films, he is among
+                India's highest-paid actors. In 2024, he launched the political party Tamilaga Vettri Kazhagam (TVK) to
+                contest the 2026 elections.</p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Vijay Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Arjunaru Villu</p>
+                <audio src="/audio/Arjunaru Villu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Azhagooril Poothavale</p>
+                <audio src="/audio/Azhagooril Poothavale.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Beast Mode</p>
+                <audio src="/audio/Beast Mode.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Chella Kutti</p>
+                <audio src="/audio/Chella Kutti.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Kandangi kandangi</p>
+                <audio src="/audio/Kandangi kandangi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Kokkarakko</p>
+                <audio src="/audio/Kokkarakko.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Oru Pere Varalaaru</p>
+                <audio src="/audio/Oru Pere Varalaaru.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Ranjithame Ranjithame</p>
+                <audio src="/audio/Ranjithame Ranjithame.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Top Tucker</p>
+                <audio src="/audio/Top Tucker.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Verithanam</p>
+                <audio src="/audio/Verithanam.mp3" controls></audio>
+            </div>
+
+
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

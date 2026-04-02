@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Sivakarthikeyan</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Actor</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/SK.jpg" alt="" id="photo">
+            <h1>About Sivakarthikeyan</h1>
+            <p>Sivakarthikeyan (born February 17, 1985) is a popular Indian actor, producer, singer, and television
+                personality known for his versatile roles in Tamil cinema, rising from a stand-up comedian and TV host
+                on Vijay TV to a successful film star in family entertainers like Varuthapadatha Valibar Sangam and
+                Doctor, also producing films through his banner Sivakarthikeyan Productions. He's celebrated for his
+                steady rise, family-friendly appeal, and expanding career as a singer and lyricist, winning several
+                awards, including Vijay Awards.</p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Sivakarthikeyan Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Adi Alaye</p>
+                <audio src="/audio/Adi Alaye.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Bae</p>
+                <audio src="/audio/Bae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Ethir Neechal</p>
+                <audio src="/audio/Ethir Neechal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Mailaanji</p>
+                <audio src="/audio/Mailaanji.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Onnavitta Yaarum Yenakilla</p>
+                <audio src="/audio/Onnavitta Yaarum Yenakilla.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Takkunu Takkunu</p>
+                <audio src="/audio/Takkunu Takkunu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Thangapoovey</p>
+                <audio src="/audio/Thangapoovey.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Un Mela Oru Kannu</p>
+                <audio src="/audio/Un Mela Oru Kannu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Varuthapadatha Vaalibar Sangam</p>
+                <audio src="/audio/Varuthapadatha Vaalibar Sangam.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vennilavu Saaral</p>
+                <audio src="/audio/Vennilavu Saaral.mp3" controls></audio>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

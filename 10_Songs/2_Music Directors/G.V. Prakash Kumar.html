@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Directors G.V.Prakash Kumar</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Music Directors</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/G.V. Prakash Kumar.jpg" alt="" id="photo">
+            <h1>About G.V.Prakash</h1>
+            <p>G.V. Prakash Kumar is a prominent Indian music composer, actor, and singer, primarily known for his work
+                in Tamil cinema. Born on June 13, 1987, into a musically inclined family (nephew of A.R. Rahman), he
+                debuted as a composer with Veyil (2006) and gained massive acclaim for his work on Aadukalam. He
+                transitioned to acting in Darling (2015) and has since featured in films like Sarvam Thaala Mayam.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">G.V.Prakash Kumar Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Adi Alaye</p>
+                <audio src="/audio/Adi Alaye.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Chella Kutti</p>
+                <audio src="/audio/Chella Kutti.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Chillena</p>
+                <audio src="/audio/Chillena.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. En Jeevan</p>
+                <audio src="/audio/En Jeevan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Kona Kondakari</p>
+                <audio src="/audio/Kona Kondakari.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Og Sambavam</p>
+                <audio src="/audio/Og Sambavam.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Para para</p>
+                <audio src="/audio/Para para.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Pookal Pookum</p>
+                <audio src="/audio/Pookal Pookum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Vennilavu Saaral</p>
+                <audio src="/audio/Vennilavu Saaral.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Yathe Yathe</p>
+                <audio src="/audio/Yathe Yathe.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

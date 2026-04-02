@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actress Trisha Krishnan</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Actress</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/trisha.jpg" alt="" id="photo">
+            <h1>About Trisha Krishnan</h1>
+            <p>Trisha Krishnan (born 4 May 1983) is a prominent Indian actress and model, primarily renowned for her
+                work in Tamil and Telugu cinema over a career spanning more than two decades. Winning Miss Chennai in
+                1999, she rose to fame as a top actress in the 2000s, known for films like Ghilli (2004), Varsham
+                (2004), 96 (2018), and Ponniyin Selvan. She is considered one of the highest-paid actresses in South
+                India. </p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Trisha Krishnan Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Azhago Azhagu</p>
+                <audio src="/audio/Azhago Azhagu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Enai Saaithaalae</p>
+                <audio src="/audio/Enai Saaithaalae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Idhuthaanaa</p>
+                <audio src="/audio/Idhuthaanaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Kokkarakko</p>
+                <audio src="/audio/Kokkarakko.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Mazhai Vara Pogudhe</p>
+                <audio src="/audio/Mazhai Vara Pogudhe.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Mudhal Mazhai</p>
+                <audio src="/audio/Mudhal Mazhai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Pooparikka Neeyum</p>
+                <audio src="/audio/Pooparikka Neeyum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Thaen Thaen Thaen</p>
+                <audio src="/audio/Thaen Thaen Thaen.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Unn Paarvaiyil</p>
+                <audio src="/audio/Unn Paarvaiyil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Yedho Ondru</p>
+                <audio src="/audio/Yedho Ondru.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

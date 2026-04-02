@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer Karthik</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Karthik.jpg" alt="" id="photo">
+            <h1>About Karthik</h1>
+            <p>Singer Karthik (born November 7, 1980) is a prominent Indian playback singer and composer, known for his
+                versatile voice in over 8,000 songs across 15+ Indian languages, including Tamil, Telugu, and Hindi,
+                starting as a backing vocalist for A.R. Rahman and becoming a popular voice in South Indian cinema with
+                hits like "Ale Ale" and "Oru Maalai".
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Karthik Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Ale Ale</p>
+                <audio src="/audio/Ale Ale.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Enna Oru Enna Oru</p>
+                <audio src="/audio/Enna Oru Enna Oru.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Kan Pesum Varthaigal</p>
+                <audio src="/audio/Kan Pesum Varthaigal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Madura Jilla</p>
+                <audio src="/audio/Madura Jilla.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Mazhai Vara Pogudhe</p>
+                <audio src="/audio/Mazhai Vara Pogudhe.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Oru Naalaikkul</p>
+                <audio src="/audio/Oru Naalaikkul.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Unn Paarvaiyil</p>
+                <audio src="/audio/Unn Paarvaiyil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Unnaale Unnaale</p>
+                <audio src="/audio/Unnaale Unnaale.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Veesum Velichathile</p>
+                <audio src="/audio/Veesum Velichathile.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vizhi Moodi Yosithaal</p>
+                <audio src="/audio/Vizhi Moodi Yosithaal.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

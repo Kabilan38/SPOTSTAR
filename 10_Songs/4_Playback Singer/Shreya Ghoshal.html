@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer Shreya Ghoshal</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Shreya Ghoshal.jpg" alt="" id="photo">
+            <h1>About Shreya Ghoshal</h1>
+            <p>Shreya Ghoshal (born March 12, 1984) is a highly acclaimed Indian playback singer, celebrated for her
+                versatile voice and vast repertoire across many languages, launching her career after winning Sa Re Ga
+                Ma Pa and debuting in Devdas (2002). Known for hits like " Piyu Bole" and " Deewani Mastani," she has
+                won numerous awards, including National Film Awards, and is recognized for her dedication to classical
+                training, becoming a leading figure in Indian cinema, married to Shiladitya Mukhopadhyaya with a son,
+                Devyaan, and even having a wax figure at Madame Tussauds.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Shreya Ghoshal Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Anbae Peranbae</p>
+                <audio src="/audio/Anbae Peranbae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Enai Saaithaalae</p>
+                <audio src="/audio/Enai Saaithaalae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Kandangi kandangi</p>
+                <audio src="/audio/Kandangi kandangi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Mailaanji</p>
+                <audio src="/audio/Mailaanji.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Munbe Vaa</p>
+                <audio src="/audio/Munbe Vaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Nannare Nannare</p>
+                <audio src="/audio/Nannare Nannare.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Neethanae Neethane</p>
+                <audio src="/audio/Neethanae Neethane.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Onnappola Oruthana</p>
+                <audio src="/audio/Onnappola Oruthana.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Sollitaley Ava Kaadhala</p>
+                <audio src="/audio/Sollitaley Ava Kaadhala.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Thaen Thaen Thaen</p>
+                <audio src="/audio/Thaen Thaen Thaen.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist Vairamuthu</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Lyricist</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Vairamuthu.jpg" alt="" id="photo">
+            <h1>About Vairamuthu</h1>
+            <p>Vairamuthu Ramaswamy (born 1953) is a highly acclaimed Indian poet, lyricist, and author known for his40+
+                year career in the Tamil film industry. Debuting in 1980 with Nizhalgal, he has written over 7,500
+                songs, winning seven National Film Awards and honors including the Padma Shri, Padma Bhushan, and
+                Sahitya Akademi Award.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Vairamuthu Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Kandangi kandangi</p>
+                <audio src="/audio/Kandangi kandangi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Kurukku Siruthavaley</p>
+                <audio src="/audio/Kurukku Siruthavaley.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Margazhi Thingal Allava</p>
+                <audio src="/audio/Margazhi Thingal Allava.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Nannare Nannare</p>
+                <audio src="/audio/Nannare Nannare.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Oruvan Oruvan Mudhalali</p>
+                <audio src="/audio/Oruvan Oruvan Mudhalali.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Thanga Thamarai</p>
+                <audio src="/audio/Thanga Thamarai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Unnai Naan</p>
+                <audio src="/audio/Unnai Naan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Unnai Paartha Pinbu Naan</p>
+                <audio src="/audio/Unnai Paartha Pinbu Naan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Uyire Uyire</p>
+                <audio src="/audio/Uyire Uyire.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vennilavae</p>
+                <audio src="/audio/Vennilavae.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

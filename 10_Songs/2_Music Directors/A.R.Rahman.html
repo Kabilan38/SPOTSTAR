@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Directors A.R.Rahman</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Music Directors</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/A.R.Rahman.jpg" alt="" id="photo">
+            <h1>About A.R.Rahman</h1>
+            <p>A.R. Rahman (born A.S. Dileep Kumar on January 6, 1967) is a globally acclaimed Indian composer, singer,
+                and songwriter known for revolutionizing Indian cinema music by blending classical styles with
+                electronic music. As of early 2026, he is 59 years old, having built a legendary career from his debut
+                in Mani Ratnam’s Roja (1992) to winning two Academy Awards for Slumdog Millionaire.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">A.R.Rahman Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Ale Ale</p>
+                <audio src="/audio/Ale Ale.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Ennodu Nee Irundhaal</p>
+                <audio src="/audio/Ennodu Nee Irundhaal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Innum Konjam Naeram</p>
+                <audio src="/audio/Innum Konjam Naeram.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Munbe Vaa</p>
+                <audio src="/audio/Munbe Vaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Nannare Nannare</p>
+                <audio src="/audio/Nannare Nannare.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Neethanae Neethane</p>
+                <audio src="/audio/Neethanae Neethane.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Thanga Thamarai</p>
+                <audio src="/audio/Thanga Thamarai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Unakaga</p>
+                <audio src="/audio/Unakaga.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Uyire Uyire</p>
+                <audio src="/audio/Uyire Uyire.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vennilavae</p>
+                <audio src="/audio/Vennilavae.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

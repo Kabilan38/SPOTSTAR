@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Home</title>
+    <link rel="stylesheet" href="./movies_home.css">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Movies</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a> 
+        </div>
+    </nav>
+    
+    <div class="search">
+    <select name="" id="s_option">
+        <option value="" hidden>Select Language</option>
+        <option value="/11_Movies/Tamil_Movies/tamil_movies.html">Tamil</option>
+        <option value="/11_Movies/Malayalam_Movies/malayalam_movies.html">Malayalam</option>
+        <option value="/11_Movies/Telugu_Movies/telugu_movies.html">Telugu</option>
+    </select>
+    <button id="next">Next</button>
+    </div>
+
+    <div class="name1">
+        <h1>Tamil Movies</h1>
+    </div>
+    <main>
+        <a href="/11_Movies/Tamil_Movies/leo.html"><img src="/Images/leo.png" alt=""></a>
+        <a href="/11_Movies/Tamil_Movies/mankatha.html"><img src="/Images/mankatha.jpg" alt=""></a>
+        <a href="/11_Movies/Tamil_Movies/2.0.html"><img src="/Images/2.o.jpg" alt=""></a>
+        <a href="/11_Movies/Tamil_Movies/mahaan.html"><img src="/Images/mahaan.jpg" alt=""></a>
+    </main>
+    <div class="name">
+        <h1>Malayalam Movies</h1>
+    </div>
+    <main>
+        <a href="/11_Movies/Malayalam_Movies/hridayam.html"><img src="/Images/hridayam.jpg" alt=""></a>
+        <a href="/11_Movies/Malayalam_Movies/kaduva.html"><img src="/Images/kaduva.jpg" alt=""></a>
+        <a href="/11_Movies/Malayalam_Movies/premalu.html"><img src="/Images/premalu.jpg" alt=""></a>
+        <a href="/11_Movies/Malayalam_Movies/turbo.html"><img src="/Images/turbo.jpg" alt=""></a>
+    </main>
+    <div class="name">
+        <h1>Telugu Movies</h1>
+    </div>
+    <main>
+        <a href="/11_Movies/Telugu_Movies/BharathAneNenu.html"><img src="/Images/Bharath Ane Nenu.jpg" alt=""></a>
+        <a href="/11_Movies/Telugu_Movies/rrr.html"><img src="/Images/rrr.jpg" alt=""></a>
+        <a href="/11_Movies/Telugu_Movies/eega.html"><img src="/Images/eega.jpg" alt=""></a>       
+        <a href="/11_Movies/Telugu_Movies/Pushpa.html"><img src="/Images/pushpa.jpg" alt=""></a>
+    </main>
+    
+
+    <script>
+    document.getElementById("next").addEventListener("click", function () {
+        const selectedPage = document.getElementById("s_option").value;
+
+        if (selectedPage === "") {
+            alert("Please select a language");
+        } else {
+            window.location.href = selectedPage;
+        }
+    });
+</script>
+
+</body>
+</html>

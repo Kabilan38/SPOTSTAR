@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Directors Harris Jayaraj</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Music Directors</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Harris Jayaraj.jpg" alt="" id="photo">
+            <h1>About Harris Jayaraj</h1>
+            <p>Harris Jayaraj is a highly acclaimed Indian film composer, primarily for Tamil cinema, known for his
+                melodic and contemporary soundtracks in movies like Minnale, Ghajini, and Kaakha Kaakha, blending
+                Carnatic roots with modern sounds, and has won numerous awards, including Filmfare South and Tamil Nadu
+                State Awards.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Harris Jayaraj Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aathangara Orathil</p>
+                <audio src="/audio/Aathangara Orathil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Anbe Anbe</p>
+                <audio src="/audio/Anbe Anbe.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Enai Saaithaalae</p>
+                <audio src="/audio/Enai Saaithaalae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Idhuthaanaa</p>
+                <audio src="/audio/Idhuthaanaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Mudhal Mazhai</p>
+                <audio src="/audio/Mudhal Mazhai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Nenjukkul Peidhidum</p>
+                <audio src="/audio/Nenjukkul Peidhidum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Pala Palakura</p>
+                <audio src="/audio/Pala Palakura.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Unakkenna Venum Sollu</p>
+                <audio src="/audio/Unakkenna Venum Sollu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Yamma Yamma</p>
+                <audio src="/audio/Yamma Yamma.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Yedho Ondru</p>
+                <audio src="/audio/Yedho Ondru.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

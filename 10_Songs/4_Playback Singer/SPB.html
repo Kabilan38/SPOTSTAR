@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer SPB</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/SPB.jpg" alt="" id="photo">
+            <h1>About SPB</h1>
+            <p>S.P.Balasubrahmanyam (SPB or Balu) (1946-2020) was a legendary Indian playback singer, actor, music
+                director, and producer, famous for recording over 40,000 songs in 16 languages, including Telugu, Tamil,
+                Kannada, Malayalam, and Hindi, holding a Guinness World Record for most songs and receiving India's
+                Padma Shri, Padma Bhushan, and Padma Vibhushan awards. Known as a versatile voice, he debuted in 1966
+                and became an iconic figure in Indian cinema before his passing from COVID-19 complications in 2020.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">SPB Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Azhagooril Poothavale</p>
+                <audio src="/audio/Azhagooril Poothavale.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Ilamai Idho Idho</p>
+                <audio src="/audio/Ilamai Idho Idho.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Intha Maamanoda</p>
+                <audio src="/audio/Intha Maamanoda.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Kaattukuyilu</p>
+                <audio src="/audio/Kaattukuyilu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Maanguyile Poonguyile</p>
+                <audio src="/audio/Maanguyile Poonguyile.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Oruvan Oruvan Mudhalali</p>
+                <audio src="/audio/Oruvan Oruvan Mudhalali.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Pothi Vachcha Malligai</p>
+                <audio src="/audio/Pothi Vachcha Malligai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Thanga Thamarai</p>
+                <audio src="/audio/Thanga Thamarai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Unnai Paartha Pinbu Naan</p>
+                <audio src="/audio/Unnai Paartha Pinbu Naan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Yamma Yamma</p>
+                <audio src="/audio/Yamma Yamma.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

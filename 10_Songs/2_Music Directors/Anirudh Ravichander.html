@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Directors Anirudh Ravichander</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Music Directors</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Anirudh Ravichander.jpg" alt="" id="photo">
+            <h1>About Anirudh</h1>
+            <p>Anirudh Ravichander (born 16 October 1990) is a renowned Indian music composer, singer, and producer,
+                known for redefining South Indian film music with hits like "Why This Kolaveri Di" (2012). Born to actor
+                Ravi Raghavendra and dancer Lakshmi, he debuted at age 21, quickly becoming a top composer in Tamil,
+                Telugu, and Hindi cinema with credits like Vikram, Jawan, and Leo.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Anirudh Ravichander Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aaluma Doluma</p>
+                <audio src="/audio/Aaluma Doluma.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Bae</p>
+                <audio src="/audio/Bae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Beast Mode</p>
+                <audio src="/audio/Beast Mode.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Ethir Neechal</p>
+                <audio src="/audio/Ethir Neechal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Hayyoda</p>
+                <audio src="/audio/Hayyoda.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Naan Pizhai</p>
+                <audio src="/audio/Naan Pizhai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Takkunu Takkunu</p>
+                <audio src="/audio/Takkunu Takkunu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Thalai Viduthalai</p>
+                <audio src="/audio/Thalai Viduthalai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Thangame</p>
+                <audio src="/audio/Thangame.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Thangapoovey</p>
+                <audio src="/audio/Thangapoovey.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

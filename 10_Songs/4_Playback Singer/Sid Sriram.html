@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer Sid Sriram</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Sid Sriram.jpg" alt="" id="photo">
+            <h1>About Sid Sriram</h1>
+            <p>Sid Sriram (born May 19, 1990) is a renowned Indian-American playback singer, music producer, and
+                songwriter known for blending Carnatic music with R&B, soul, and pop. Based in Chennai and California,
+                he rose to fame with "Adiye" (2013) and is a prominent voice in South Indian cinema.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Sid Sriram Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Anbae Peranbae</p>
+                <audio src="/audio/Anbae Peranbae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Aradhya</p>
+                <audio src="/audio/Aradhya.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Ennadi Maayavi Nee</p>
+                <audio src="/audio/Ennadi Maayavi Nee.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Ennodu Nee Irundhaal</p>
+                <audio src="/audio/Ennodu Nee Irundhaal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Idhuvum Kadandhu Pogum</p>
+                <audio src="/audio/Idhuvum Kadandhu Pogum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Kadhaippoma</p>
+                <audio src="/audio/Kadhaippoma.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Mudhal Nee Mudivum Nee</p>
+                <audio src="/audio/Mudhal Nee Mudivum Nee.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Srivalli</p>
+                <audio src="/audio/Srivalli.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Thaarame Thaarame</p>
+                <audio src="/audio/Thaarame Thaarame.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vazhithunaiye</p>
+                <audio src="/audio/Vazhithunaiye.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

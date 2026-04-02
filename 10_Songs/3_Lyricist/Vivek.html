@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist Vivek</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Lyricist</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Vivek.jpg" alt="" id="photo">
+            <h1>About Vivek</h1>
+            <p>Vivek Velmurugan known by his stage name Vivek is an Indian lyricist working on Tamil language films.
+                After making his debut in Enakkul Oruvan, he received critical acclaim for his work in 36 Vayadhinile,
+                Jil Jung Juk, Mersal, Sarkar, Petta, Bigil and Jagame Thandhiram.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Vivek Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Beast Mode</p>
+                <audio src="/audio/Beast Mode.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Ennadi Maayavi Nee</p>
+                <audio src="/audio/Ennadi Maayavi Nee.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Hayyoda</p>
+                <audio src="/audio/Hayyoda.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Neethanae Neethane</p>
+                <audio src="/audio/Neethanae Neethane.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Oru Pere Varalaaru</p>
+                <audio src="/audio/Oru Pere Varalaaru.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Ranjithame Ranjithame</p>
+                <audio src="/audio/Ranjithame Ranjithame.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Thangapoovey</p>
+                <audio src="/audio/Thangapoovey.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Top Tucker</p>
+                <audio src="/audio/Top Tucker.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Unakaga</p>
+                <audio src="/audio/Unakaga.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Verithanam</p>
+                <audio src="/audio/Verithanam.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

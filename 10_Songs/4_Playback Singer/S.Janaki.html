@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer S.Janaki</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/S. Janaki.jpg" alt="" id="photo">
+            <h1>About S.Janaki</h1>
+            <p>S.Janaki (born April 23, 1938) is a legendary Indian playback singer, nicknamed the "Nightingale of South
+                India," celebrated for her exceptionally versatile voice and prolific career spanning over six decades,
+                recording thousands of songs in numerous languages, including Tamil, Telugu, Malayalam, and Kannada,
+                becoming a beloved figure in South Indian cinema. She has won numerous accolades, including National and
+                State Film Awards, and is known for hits like "Mizhiyoram" and "Thumbi Va Thumbakkudathin," although she
+                briefly retired in 2017 before reversing the decision for select projects.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">S.Janaki Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aasai Athigam Vachu</p>
+                <audio src="/audio/Aasai Athigam Vachu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Chinna Chinna Vanna Kuyil</p>
+                <audio src="/audio/Chinna Chinna Vanna Kuyil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Inji Idupazhaga</p>
+                <audio src="/audio/Inji Idupazhagi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Intha Maamanoda</p>
+                <audio src="/audio/Intha Maamanoda.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Kanmani Anbodu Kadhalan</p>
+                <audio src="/audio/Kanmani Anbodu Kadhalan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Karutha Machan</p>
+                <audio src="/audio/Karutha Machan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Maanguyile Poonguyile</p>
+                <audio src="/audio/Maanguyile Poonguyile.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Margazhi Thingal Allava</p>
+                <audio src="/audio/Margazhi Thingal Allava.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Pothi Vachcha Malligai</p>
+                <audio src="/audio/Pothi Vachcha Malligai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Thendral Vandhu</p>
+                <audio src="/audio/Thendral Vandhu.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist Vaali</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Lyricist</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/vaali.jpg" alt="" id="photo">
+            <h1>About Vaali</h1>
+            <p>Vaali (1931–2013), born T. S. Rangarajan, was a legendary Tamil film lyricist and poet with over 15,000
+                songs spanning five decades, rivaling Kannadasan. Known for his work in the 1960s-70s MGR era and later
+                with Ilaiyaraaja, he penned hits for MGR, Sivaji Ganesan, Kamal Haasan, and Rajinikanth. He was also an
+                author, actor, and Padma Shri recipient.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Vaali Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Chinna Chinna Vanna Kuyil</p>
+                <audio src="/audio/Chinna Chinna Vanna Kuyil.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Ethir Neechal</p>
+                <audio src="/audio/Ethir Neechal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Ilamai Idho Idho</p>
+                <audio src="/audio/Ilamai Idho Idho.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Inji Idupazhaga</p>
+                <audio src="/audio/Inji Idupazhagi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Kaattukuyilu</p>
+                <audio src="/audio/Kaattukuyilu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Kanmani Anbodu Kadhalan</p>
+                <audio src="/audio/Kanmani Anbodu Kadhalan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Konja Naal Poru Thalaivaa</p>
+                <audio src="/audio/Konja Naal Poru Thalaivaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Munbe Vaa</p>
+                <audio src="/audio/Munbe Vaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Thendral Vandhu</p>
+                <audio src="/audio/Thendral Vandhu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Yedho Ondru</p>
+                <audio src="/audio/Yedho Ondru.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

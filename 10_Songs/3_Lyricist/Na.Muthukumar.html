@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist Na.Muthukumar</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Lyricist</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Na. Muthukumar.jpg" alt="" id="photo">
+            <h1>About Na.Muthukumar</h1>
+            <p>Na.Muthukumar (1975–2016) was a highly acclaimed Tamil film lyricist, poet, and author who penned over
+                1,500 songs in a career spanning from 1999 to 2016. He won two National Film Awards for Best Lyrics
+                (Thanga Meenkal, Saivam) and holds the record for the most Filmfare Awards for Best Lyricist in Tamil.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Na.Muthukumar Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Adada Mazhaida</p>
+                <audio src="/audio/Adada Mazhaida.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Azhago Azhagu</p>
+                <audio src="/audio/Azhago Azhagu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Enna Oru Enna Oru</p>
+                <audio src="/audio/Enna Oru Enna Oru.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Kan Pesum Varthaigal</p>
+                <audio src="/audio/Kan Pesum Varthaigal.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Oru Naalaikkul</p>
+                <audio src="/audio/Oru Naalaikkul.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Pala Palakura</p>
+                <audio src="/audio/Pala Palakura.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Pookal Pookum</p>
+                <audio src="/audio/Pookal Pookum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Pooparikka Neeyum</p>
+                <audio src="/audio/Pooparikka Neeyum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Thuli Thuli Mazhaiyaai</p>
+                <audio src="/audio/Thuli Thuli Mazhaiyaai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Venmegam Pennaga</p>
+                <audio src="/audio/Venmegam Pennaga.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

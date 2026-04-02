@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actress Samantha</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Actress</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/samantha.jpg" alt="" id="photo">
+            <h1>About Samantha</h1>
+            <p>Samantha Ruth Prabhu (born April 28, 1987) is a leading Indian actress and producer known for her work in
+                Tamil and Telugu cinema. Debuting in 2010 with Ye Maaya Chesave, she has become one of South India's
+                highest-paid actresses. She is celebrated for her versatility, winning multiple Filmfare Awards, and is
+                known for her resilience, often overcoming personal health struggles.</p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Samantha Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Aathi</p>
+                <audio src="/audio/Aathi.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Aradhya</p>
+                <audio src="/audio/Aradhya.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Chella Kutti</p>
+                <audio src="/audio/Chella Kutti.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Dippam Dappam</p>
+                <audio src="/audio/Dippam Dappam.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. En Jeevan</p>
+                <audio src="/audio/En Jeevan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Enna Solla</p>
+                <audio src="/audio/Enna Solla.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Kadhal Aasai</p>
+                <audio src="/audio/Kadhal Aasai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Neethanae Neethane</p>
+                <audio src="/audio/Neethanae Neethane.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Onnavitta Yaarum Yenakilla</p>
+                <audio src="/audio/Onnavitta Yaarum Yenakilla.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Veesum Velichathile</p>
+                <audio src="/audio/Veesum Velichathile.mp3" controls></audio>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

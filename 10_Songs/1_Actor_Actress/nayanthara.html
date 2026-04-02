@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actress Nayanthara</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Actress</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/nayanthara.jpg" alt="" id="photo">
+            <h1>About Nayanthara</h1>
+            <p>Nayanthara (born Diana Mariam Kurien on November 18, 1984) is a highly acclaimed Indian actress and
+                producer, widely known as the "Lady Superstar" of South Indian cinema. With a career spanning over two
+                decades, she has appeared in over 75 films, primarily in Tamil, Telugu, and Malayalam, earning five
+                Filmfare Awards South and becoming one of the highest-paid actresses.</p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Nayanthara Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Anbe Anbe</p>
+                <audio src="/audio/Anbe Anbe.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Chillena</p>
+                <audio src="/audio/Chillena.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Hayyoda</p>
+                <audio src="/audio/Hayyoda.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Idhuvum Kadandhu Pogum</p>
+                <audio src="/audio/Idhuvum Kadandhu Pogum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Naan Pizhai</p>
+                <audio src="/audio/Naan Pizhai.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Neeyum Naanum Anbe</p>
+                <audio src="/audio/Neeyum Naanum Anbe.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Oorellam Unnai Kandu</p>
+                <audio src="/audio/Oorellam Unnai Kandu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Takkunu Takkunu</p>
+                <audio src="/audio/Takkunu Takkunu.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Thangame</p>
+                <audio src="/audio/Thangame.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Unakaga</p>
+                <audio src="/audio/Unakaga.mp3" controls></audio>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

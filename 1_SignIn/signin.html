@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotStar SignIn</title>
+    <link rel="stylesheet" href="./signin.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <img src="/Images/logo.png" alt="" width="80px" height="80px">
+        <h1>SpotStar</h1>
+    </nav>
+    <main>
+        <div>
+            <h1>SignIn</h1>
+            <form action="">
+                <label for="">Phone</label>
+                <input type="tel" placeholder="Enter Phone Number">
+                <label for="">Password</label>
+                <input type="password" placeholder="Enter Password">
+                <a href="/4_Forget/forget.html" id="Forget">Forget Password?</a>
+                <button  type="button" onclick="signin()">SignIn</button>
+                <footer>
+                    <p>Don't have an account?</p>
+                    <a href="/2_SignUp/signup.html">SignUp</a>
+                </footer>                               
+            </form>
+ 
+        </div>
+    </main>
+    <script>
+    function signin() {
+        window.location.href = "/6_Home/home.html";
+    }
+    </script>
+
+</body>
+</html>            
+                

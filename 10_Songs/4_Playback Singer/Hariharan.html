@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback Singer Hariharan</title>
+    <link rel="stylesheet" href="/10_Songs/all.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_left">
+            <img src="/Images/logo.png" alt="" width="80px" height="80px">
+            <h1>SpotStar - Songs - Playback Singer</h1>
+        </div>
+
+        <div class="nav_right">
+            <a href="/6_Home/home.html">Home</a>
+            <a href="/7_About/about.html">About</a>
+            <a href="/8_Contact/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <img src="/Images/Hariharan.jpg" alt="" id="photo">
+            <h1>About Hariharan</h1>
+            <p>Hariharan is a legendary Indian playback singer and ghazal artist, known for his velvety voice, fusion
+                music pioneering with Colonial Cousins, and versatility across Hindi, Tamil, and other languages,
+                earning him the Padma Shri and National Awards. He comes from a musical family, mentored by his Carnatic
+                musician parents, and rose to fame with hits like "Tu Hi Re" and "Roja Jaaneman," becoming a respected
+                figure in Indian music.
+            <p>
+
+        </div>
+        <div class="right">
+            <div>
+                <h1 class="title">Hariharan Hit Lists</h1>
+            </div>
+            <div class="no1">
+                <p>1. Enai Saaithaalae</p>
+                <audio src="/audio/Enai Saaithaalae.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>2. Konja Naal Poru Thalaivaa</p>
+                <audio src="/audio/Konja Naal Poru Thalaivaa.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>3. Kurukku Siruthavaley</p>
+                <audio src="/audio/Kurukku Siruthavaley.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>4. Maan Kuttiye </p>
+                <audio src="/audio/Maan Kuttiye.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>5. Nenjukkul Peidhidum</p>
+                <audio src="/audio/Nenjukkul Peidhidum.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>6. Pala Palakura</p>
+                <audio src="/audio/Pala Palakura.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>7. Unnai Naan</p>
+                <audio src="/audio/Unnai Naan.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>8. Uyire Uyire</p>
+                <audio src="/audio/Uyire Uyire.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>9. Venmegam Pennaga</p>
+                <audio src="/audio/Venmegam Pennaga.mp3" controls></audio>
+            </div>
+            <div class="no1">
+                <p>10. Vennilavae</p>
+                <audio src="/audio/Vennilavae.mp3" controls></audio>
+            </div>
+        </div>
+    </main>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
