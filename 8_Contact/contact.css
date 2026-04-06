@@ -156,7 +156,8 @@ a>:hover {
     .nav_right>a {
         font-size: 10px;
     }
-    main {
+main {
+    height: auto;
     width: auto;
 
 }

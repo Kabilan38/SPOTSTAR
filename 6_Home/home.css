@@ -88,10 +88,10 @@ main{
 
 @media (max-width: 600px) {
 
-    nav {
+   nav {
         height: auto;
         padding: 10px 15px;
-        gap: 8px;
+        gap: 6px;
     }
 
     .nav_left img {
@@ -99,7 +99,7 @@ main{
         height: 40px;
     }
 
-    .nav_left > h1 {
+    .nav_left>h1 {
         font-size: 20px;
     }
 
@@ -107,19 +107,20 @@ main{
         gap: 14px;
     }
 
-    .nav_right > a {
+    .nav_right>a {
         font-size: 10px;
     }
 
     main {
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 60px;
     }
 
     .homeimg {
-        width: 180px;
-        height: 180px;
+        width: 230px;
+        height: 230px;
         border-radius: 24px;
         box-shadow: 0 0 8px 6px rgba(9, 195, 242, 0.7);
     }
