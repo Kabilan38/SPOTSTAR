@@ -146,7 +146,7 @@ a>:hover {
     }
 
     .nav_left>h1 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .nav_right {
@@ -154,6 +154,11 @@ a>:hover {
     }
 
     .nav_right>a {
-        font-size: 13px;
+        font-size: 10px;
     }
+    main {
+    width: 70%;
+
+}
+    
 }

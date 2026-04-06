@@ -189,7 +189,6 @@ iframe:hover {
 
     .nav_right {
         gap: 12px;
-        flex-wrap: wrap;
     }
 
     .nav_right>a {
@@ -259,6 +258,8 @@ iframe:hover {
 
     pre {
         font-size: 13px;
+        white-space: pre-wrap;   /* allows wrapping */
+        word-break: break-word;
     }
 
     pre>span {
