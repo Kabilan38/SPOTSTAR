@@ -80,3 +80,55 @@ button:hover{
     color: white;
 }
 
+@media (max-width: 600px) {
+
+    nav {
+        height: auto;
+        padding: 15px 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav_left>img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .nav_left>h1 {
+        font-size: 28px;
+    }
+
+
+    main>div {
+        width: 70%;
+    }
+
+    main>div>h1 {
+        font-size: 26px;
+        color: white;
+    }
+
+    form>label {
+        font-size: 16px;
+        color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    form>input {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    form>button {
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 14px;
+        margin-top: 8px;
+    }
+
+}
