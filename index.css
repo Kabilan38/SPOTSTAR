@@ -1,33 +1,35 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url(/Images/background.jpg);
     background-size: cover;
 }
-nav{
-    height:20vh;
+
+nav {
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
 }
 
-nav>h1{
+nav>h1 {
     color: white;
     font-size: 50px;
 }
 
-main{
+main {
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main>div{
+main>div {
     height: 400px;
     width: 400px;
     border: 1px solid white;
@@ -41,33 +43,36 @@ main>div{
     row-gap: 50px;
 }
 
-form>label{
+form>label {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
     letter-spacing: 1.3px;
 }
-form>input{
+
+form>input {
     display: block;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid  #09c3f2;
+    border: 2px solid #09c3f2;
     width: 300px;
     margin-bottom: 10px;
 }
-#Forget{
+
+#Forget {
     display: block;
     padding-left: 55%;
     text-decoration: none;
     font-size: 18px;
     color: #0498bc;
 }
-#Forget:hover{
+
+#Forget:hover {
     color: white;
 }
 
 
-form>button{
+form>button {
     margin-top: 10px;
     padding: 10px;
     border-radius: 20px;
@@ -81,21 +86,106 @@ form>button{
     color: black;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     color: white;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     gap: 10px;
     font-size: 18px;
     padding-top: 10px;
 }
-footer>a{
+
+footer>a {
     color: #0498bc;
     text-decoration: none;
 }
-footer>a:hover{
+
+footer>a:hover {
     color: white;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        height: auto;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    nav img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    nav>h1 {
+        font-size: 28px;
+    }
+
+    main {
+        height: auto;
+        padding: 20px 15px 40px;
+        align-items: center;
+    }
+
+    main>div {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        row-gap: 25px;
+        border-radius: 20px;
+    }
+
+    main>div>h1 {
+        font-size: 26px;
+        color: white;
+    }
+
+    form>label {
+        font-size: 16px;
+        color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    form>input {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    #Forget {
+        padding-left: 45%;
+        font-size: 14px;
+    }
+
+    form>button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 14px;
+        margin-top: 8px;
+    }
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 15px;
+        padding-top: 8px;
+        gap: 6px;
+    }
+
+    footer>p {
+        color: white;
+    }
+
+    footer>a {
+        font-size: 15px;
+    }
 }
