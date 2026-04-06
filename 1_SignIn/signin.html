@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpotStar SignIn</title>
-    <link rel="stylesheet" href="./signin.css">
-    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotStar SignIn</title>
+  <link rel="stylesheet" href="./signin.css">
+  <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
 </head>
+
 <body>
-    <nav>
-        <img src="/Images/logo.png" alt="" width="80px" height="80px">
-        <h1>SpotStar</h1>
-    </nav>
-    <main>
-        <div>
-            <h1>SignIn</h1>
-            <form action="">
-                <label for="">Phone</label>
-                <input type="tel" placeholder="Enter Phone Number">
-                <label for="">Password</label>
-                <input type="password" placeholder="Enter Password">
-                <a href="/4_Forget/forget.html" id="Forget">Forget Password?</a>
-                <button  type="button" onclick="signin()">SignIn</button>
-                <footer>
-                    <p>Don't have an account?</p>
-                    <a href="/2_SignUp/signup.html">SignUp</a>
-                </footer>                               
-            </form>
- 
-        </div>
-    </main>
-    <script>
-    function signin() {
+  <nav>
+    <img src="/Images/logo.png" alt="" width="80px" height="80px">
+    <h1>SpotStar</h1>
+  </nav>
+  <main>
+    <div>
+      <h1>SignIn</h1>
+      <form action="">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter Email" id="email">
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter Password" id="password">
+        <a href="/4_Forget/forget.html" id="Forget">Forget Password?</a>
+        <button type="button" onclick="signin()">SignIn</button>
+        <footer>
+          <p>Don't have an account?</p>
+          <a href="/2_SignUp/signup.html">SignUp</a>
+        </footer>
+      </form>
+
+    </div>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFXvFHRh-nqspHXcqR7WmB7iH7bgZpExo",
+      authDomain: "spotstar-6ab0f.firebaseapp.com",
+      projectId: "spotstar-6ab0f",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // SIGNIN FUNCTION
+    window.signin = async function () {
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("Please enter email and password");
+        return;
+      }
+
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        alert("Login Successful ✅");
+
         window.location.href = "/6_Home/home.html";
-    }
-    </script>
+
+      } catch (error) {
+        console.error(error);
+
+        if (error.code === "auth/user-not-found") {
+          alert("User not found ❌");
+        } else if (error.code === "auth/wrong-password") {
+          alert("Wrong password ❌");
+        } else {
+          alert(error.message);
+        }
+      }
+    };
+  </script>
 
 </body>
-</html>            
-                
+
+</html>

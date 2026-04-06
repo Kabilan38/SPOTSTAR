@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./contact.css">
     <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <nav>
         <div class="nav_left">
@@ -24,60 +26,37 @@
         <div>
             <h1>Contact</h1>
             <form action="">
-                <label for="">Name</label>
-                <input type="text" placeholder="Enter Your Name">
                 <label for="">Email</label>
-                <input type="text" placeholder="Enter Your Email">
+                <input type="text" placeholder="Enter Your Email" id="email">
                 <label for="">Message</label>
-                <textarea name="" id="" placeholder="Enter Message"></textarea>
+                <textarea name="" id="" placeholder="Enter Message" id="message"></textarea>
                 <button onclick="back()" type="button">Cancel</button>
-                <button onclick="ok()" type="button">Submit</button>                           
-            </form> 
+                <button onclick="ok()" type="button">Submit</button>
+            </form>
         </div>
     </main>
 
     <script>
-        function back(){
+        function back() {
             window.location.href = "/6_Home/home.html";
         }
-        function ok(){
-            window.location.href="/9_Response/response.html"
+        function ok() {
+            let email = document.querySelector("input").value.trim();
+            let message = document.querySelector("textarea").value.trim();
+
+            if (email === "") {
+                alert("Email is required");
+                return;
+            }
+
+            if (message === "") {
+                alert("Message is required");
+                return;
+            }
+
+            window.location.href = "/9_Response/response.html";
         }
     </script>
 </body>
-</html>            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+</html>

@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget Password</title>
-    <link rel="stylesheet" href="./forget.css">
-    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forget Password</title>
+  <link rel="stylesheet" href="./forget.css">
+  <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
 </head>
+
 <body>
-    <nav>
-        <img src="/Images/logo.png" alt="" width="80px" height="80px">
-        <h1>SpotStar</h1>
-    </nav>
-    <main>
-        <div>
-            <h1>Reset Password</h1>
-            <form action="">
-                <label for="">Phone</label>
-                <input type="tel" placeholder="Enter Your Phone Number">
-                <label for="">New Password</label>
-                <input type="password" placeholder="Enter Your New Password">
-                <label for="">Confirm Password</label>
-                <input type="password" placeholder="Re-Enter Your Password">
-                <button type="button" onclick="ok()">Update</button>                           
-            </form>
-        </div>
-    </main>
-    <script>
-        function ok(){
-            window.location.href="/5_Reset/reset.html";
+  <nav>
+    <img src="/Images/logo.png" alt="" width="80px" height="80px">
+    <h1>SpotStar</h1>
+  </nav>
+  <main>
+    <div>
+      <h1>Reset Password</h1>
+      <form action="">
+        <label for="">Email</label>
+        <input type="tel" placeholder="Enter Your Email" id="email">
+        <button type="button" onclick="ok()">Update</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFXvFHRh-nqspHXcqR7WmB7iH7bgZpExo",
+      authDomain: "spotstar-6ab0f.firebaseapp.com",
+      projectId: "spotstar-6ab0f",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.ok = async function () {
+
+      const email = document.getElementById("email").value;
+
+      if (!email) {
+        alert("Enter your email");
+        return;
+      }
+
+      try {
+        await sendPasswordResetEmail(auth, email);
+
+        alert("Password reset link sent to your email 📩");
+        window.location.href = "/5_Reset/reset.html";
+
+      } catch (error) {
+        console.error(error);
+
+        if (error.code === "auth/user-not-found") {
+          alert("User not found ❌");
+        } else {
+          alert(error.message);
         }
-    </script>
+      }
+
+
+    };
+
+
+  </script>
 </body>
-</html>            
-                
+
+</html>
