@@ -117,26 +117,16 @@ footer>a:hover {
     }
 
     nav img {
-        width: 45px !important;
-        height: 45px !important;
+        width: 45px;
+        height: 45px;
     }
 
     nav>h1 {
         font-size: 28px;
     }
 
-    main {
-        height: auto;
-        padding: 20px 15px 40px;
-        align-items: center;
-    }
-
     main>div {
-        width: 100%;
-        height: auto;
-        padding: 30px 20px;
-        row-gap: 25px;
-        border-radius: 20px;
+        width: 70%;
     }
 
     main>div>h1 {
