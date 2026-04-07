@@ -157,8 +157,8 @@ a>:hover {
         font-size: 10px;
     }
 
-    main {
-        width: 70%;
+    main>div {
+        width: 80%;
 
     }
 
