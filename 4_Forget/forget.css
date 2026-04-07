@@ -77,3 +77,28 @@ form>button {
 button:hover {
     color: white;
 }
+
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+        padding: 15px 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav>img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav>h1 {
+        font-size: 28px;
+    }
+
+    main>div {
+        width: 70%;
+    }
+
+
+}

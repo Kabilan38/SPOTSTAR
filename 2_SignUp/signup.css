@@ -1,37 +1,42 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url(/Images/background.jpg);
     background-size: cover;
 }
-nav{
-    height:10vh;
+
+nav {
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
 }
-.nav_left{
-    display:flex;
+
+.nav_left {
+    display: flex;
     align-items: center;
     gap: 20px;
 }
-.nav_left>h1{
+
+.nav_left>h1 {
     color: white;
     font-size: 50px;
 }
 
-main{
+main {
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main>div{
+
+main>div {
     height: 650px;
     width: 400px;
     border: 1px solid white;
@@ -45,23 +50,24 @@ main>div{
     row-gap: 50px;
 }
 
-form>label{
+form>label {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
     letter-spacing: 1.3px;
 }
-form>input{
+
+form>input {
     display: block;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid  #09c3f2;
+    border: 2px solid #09c3f2;
     width: 300px;
     margin-bottom: 10px;
 }
 
 
-form>button{
+form>button {
     margin-top: 10px;
     padding: 10px;
     border-radius: 20px;
@@ -76,7 +82,7 @@ form>button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     color: white;
 }
 
@@ -90,12 +96,12 @@ button:hover{
         justify-content: center;
     }
 
-    .nav_left>img{
+    nav>img {
         width: 45px;
         height: 45px;
     }
 
-    .nav_left>h1 {
+    nav>h1 {
         font-size: 28px;
     }
 
